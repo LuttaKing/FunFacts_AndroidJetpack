@@ -68,7 +68,7 @@ fun ButtonComponent(
     goToDetailScreen:() -> Unit
 ){
     Button(modifier = Modifier.fillMaxWidth(),
-        onClick = { goToDetailScreen }) {
+        onClick = { goToDetailScreen() }) {
         TextComponent(tex = "Detail Screen", textSiz = 18.sp, colorv = Color.White)
     }
 }
