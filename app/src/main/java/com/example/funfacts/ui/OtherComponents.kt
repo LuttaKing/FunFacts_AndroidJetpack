@@ -5,6 +5,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -73,8 +75,27 @@ fun ButtonComponent(
     }
 }
 
+
+
+@Composable
+fun FactCard(){
+    Card(shape= RoundedCornerShape(8.dp),modifier = Modifier
+        .padding(32.dp)
+        .fillMaxWidth(),
+        elevation = CardDefaults.cardElevation(4.dp)
+    ){
+
+        Column(modifier = Modifier.padding(18.dp,24.dp)) {
+            Spacer(modifier= Modifier.size(24.dp))
+            TextComponent(tex = "Navigate between screens using a NavHostController . " +
+                    "Manipulate the back stack to navigate to previous screens.", textSiz = 20.sp)
+            Spacer(modifier= Modifier.size(24.dp))
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun ButtonComponentPreview(){
-    ButtonComponent({})
+   FactCard()
 }
