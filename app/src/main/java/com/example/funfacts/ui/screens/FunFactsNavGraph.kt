@@ -14,6 +14,7 @@ fun FunFactsNavigateGraph(userInputViewModel: UserInputViewModel= viewModel()){
 
         composable(Routes.USER_INPUT_SCREEN){
           UserInputScreen(userInputViewModel, showWelcomeScreen = {
+
               navController.navigate(Routes.WELCOME_SCREEN
 
               )
@@ -22,7 +23,8 @@ fun FunFactsNavigateGraph(userInputViewModel: UserInputViewModel= viewModel()){
         }
 
         composable( Routes.WELCOME_SCREEN  ){
-            WelcomeScreen(userInputViewModel.uiState.value.animalSelected,
+            WelcomeScreen(
+                userInputViewModel.uiState.value.animalSelected,
                 userInputViewModel.uiState.value.nameEntered)
         }
 
